@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10409 10411 10412 정통 프로젝트</title>
+    <style>
+        
+        header > div
+        {
+            width: 1020px;
+            height: 450px;
+            
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            top: 20px;
+        }
+        
+        nav{
+            background-color: #F5F5F5;
+        }
+        
+        nav > div{
+            font-size: 20px; 
+            background-color: white;
+            
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            top: 5px;
+            
+            line-height: 40px;
+            word-spacing: 5px; 
+        }
+        
+        nav a{
+            text-decoration: none;
+            position: relative;
+            right: -20px;
+            font-size: 0.8em;
+        }
+        
+        section{
+            background-color: #F5F5F5;
+            height: 650px;
+            
+            background-image: url(%EB%82%B4%EC%8A%A4%ED%83%80%EC%9D%BC%EB%B0%B0%EA%B2%BD2.png);
+        }
+        
+        .output{
+            display: inline-block;
+            position: absolute;
+            left: 750px;
+            top: 510px;
+        }
+        
+        #input {
+            top: 520px;
+            left: 330px;
+            padding-left: 20px;
+            position: absolute;
+            background-color: white;
+            
+            
+            
+            display: inline-block;
+            width: 400px;
+            height: 600px;
+            
+        }
+        
+        .intro {
+            top: 520px;
+            left: 1170px;
+            position: absolute;
+            background-color: white;
+            
+            display: inline-block;
+            width: 400px;
+            height: 600px;
+            padding-right: 14px;
+            
+        }
+        
+        .intro > h1{
+            position: relative;
+            bottom: 10px;
+            left: 20px;
+            
+            display: block;
+            font-size: 2.0em;
+        }
+        
+        a{color:#262626; }
+        a:hover{color: #ABABAB; font-weight: bolder;}
+        
+        img{margin: 10px 10px 10px 10px; align-content: center; } 
+        
+        #layer{
+            margin: 10px 10px 10px 10px;
+        }
+        
+        
+        footer{
+            height: 100px;
+            background-color: white;
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+ 
+     <header>
+        <div>
+         <img src="%ED%83%80%EC%9D%B4%ED%8B%80.png" alt="코디해주는 코기">
+         </div>
+     </header>
+  
+    <nav>
+       <div>
+        <a href="%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4.html">홈</a>
+        <a href="%EC%86%8C%EC%8B%9D.html">소식</a>
+        <a href="%EB%82%B4%EC%8A%A4%ED%83%80%EC%9D%BC.html">내스타일</a>
+        <a href="%ED%8C%A8%EC%85%98%EC%A0%95%EB%B3%B4.html">패션정보</a>
+        </div>
+    </nav>
+   
+   <section>
+    <div id="input">
+    
+       <h1>&gt; 정보 입력</h1>
+       
+    <br>
+    <form action="">
+        <span style="display: block">키: <input type="text" value="150" name="input_height"> (cm)</span><br>
+        <span style="display: block">몸무게: <input type="text" value="70" name="input_weight"> (kg)</span><br>
+        <span style="display: block">얼굴형: 
+        <input type="radio" name="face" value="egg" checked>달걀형
+        <input type="radio" name="face"value="fat">통통
+        <input type="radio"name="face" value="tri">역삼각형
+        <input type="radio"name="face" value="squ">사각형
+        </span>
+    
+        <br><br>
+    
+        <br><br>
+        
+        깔끔/단정함 <input type="range" name="RkfRma"min="0" max="100" step="25" value="50"> 독특함 <br><br>
+        
+        디자인 <input type="range" name="elwkdls" min="0" max="100" step="25" value="50"> 실용성
+        <input type="button" value="제출" style="position: relative; left: 70px; top: 210px; font-size: 1.0em;"onclick="start()">
+        
+    </form>
+    </div>
+   
+    <script>
+        function start(){
+            var street=document.getElementsByClassName('street')
+            var minimal=document.getElementsByClassName('minimal');
+            var casual=document.getElementsByClassName('casual');
+            var america=document.getElementsByClassName('america');
+            var tech=document.getElementsByClassName('tech');
+
+            var h=parseInt(document.getElementsByName("input_height")[0].value);
+            var w=parseInt(document.getElementsByName("input_weight")[0].value);
+            var fa=document.getElementsByName("face");
+            var facety;
+            for(var i=0;i<4;i++){
+                if(fa[i].checked){
+                    facety=fa[i].value;
+                }
+            }
+            var den=parseInt(document.getElementsByName("RkfRma")[0].value);
+            var visual=parseInt(document.getElementsByName("elwkdls")[0].value);
+            var bmi = w/(h*h)*10000;
+            if((21.44<=bmi&&bmi<25.08)&&den<=25&&visual<=25){//미니멀
+                for(var a=0;a<minimal.length;a++){
+                   minimal[a].style.opacity=1
+               }
+               for(var a=0;a<casual.length;a++){
+                   casual[a].style.opacity=0
+               }
+               for(var a=0;a<america.length;a++){
+                   america[a].style.opacity=0
+               }
+               for(var a=0;a<tech.length;a++){
+                   tech[a].style.opacity=0
+               }
+               for(var a=0;a<street.length;a++){
+                   street[a].style.opacity=0
+               }
+            }
+            
+            else if(bmi<21.44&&facety=='tri'&&(75<=den&&den<=100)&&visual<=25){//스트릿
+                for(var a=0;a<minimal.length;a++){
+                   minimal[a].style.opacity=0
+               }
+               for(var a=0;a<casual.length;a++){
+                   casual[a].style.opacity=0
+               }
+               for(var a=0;a<america.length;a++){
+                   america[a].style.opacity=0
+               }
+               for(var a=0;a<tech.length;a++){
+                   tech[a].style.opacity=0
+               }
+               for(var a=0;a<street.length;a++){
+                   street[a].style.opacity=1
+               }
+            }
+            else if(bmi<21.44&&facety=='tri'&&(90<=den&&den<=100)&&(90<=visual&&visual<=100)){//테크웨어
+                for(var a=0;a<minimal.length;a++){
+                   minimal[a].style.opacity=0
+               }
+               for(var a=0;a<casual.length;a++){
+                   casual[a].style.opacity=0
+               }
+               for(var a=0;a<america.length;a++){
+                   america[a].style.opacity=0
+               }
+               for(var a=0;a<tech.length;a++){
+                   tech[a].style.opacity=1
+               }
+               for(var a=0;a<street.length;a++){
+                   street[a].style.opacity=0
+               }
+            }   
+            else if(bmi>=25.08&&(facety=='fat'||facety=='egg')&&(75<=den&&den<=100)&&(50<=visual&&visual<=100)){//아메카지
+                for(var a=0;a<minimal.length;a++){
+                   minimal[a].style.opacity=0
+               }
+               for(var a=0;a<casual.length;a++){
+                   casual[a].style.opacity=0
+               }
+               for(var a=0;a<america.length;a++){
+                   america[a].style.opacity=1
+               }
+               for(var a=0;a<tech.length;a++){
+                   tech[a].style.opacity=0
+               }
+               for(var a=0;a<street.length;a++){
+                   street[a].style.opacity=0
+               }
+            }
+            else {//캐쥬얼
+                for(var a=0;a<minimal.length;a++){
+                   minimal[a].style.opacity=0
+               }
+               for(var a=0;a<casual.length;a++){
+                   casual[a].style.opacity=1
+               }
+               for(var a=0;a<america.length;a++){
+                   america[a].style.opacity=0
+               }
+               for(var a=0;a<tech.length;a++){
+                   tech[a].style.opacity=0
+               }
+               for(var a=0;a<street.length;a++){
+                   street[a].style.opacity=0
+               }
+            }
+        }
+    </script>
+    <img  class="output minimal" style="opacity: 0;" src="%EC%8A%A4%ED%83%80%EC%9D%BC%EC%B6%94%EC%B2%9C-%EB%AF%B8%EB%8B%88%EB%A9%80.png" alt="미니멀 추천">
+    
+    <img  class="output casual" style="opacity: 0;"  src="%EC%8A%A4%ED%83%80%EC%9D%BC%EC%B6%94%EC%B2%9C-%EC%BA%90%EC%A5%AC%EC%96%BC.png" alt="캐쥬얼 추천">
+     
+    <img class="output street" style="opacity: 0;" src="%EC%8A%A4%ED%83%80%EC%9D%BC%EC%B6%94%EC%B2%9C-%EC%8A%A4%ED%8A%B8%EB%A6%BF2.png" alt="스트릿 추천">
+    
+    <img  class="output america" style="opacity: 0;" src="%EC%8A%A4%ED%83%80%EC%9D%BC%EC%B6%94%EC%B2%9C-%EC%95%84%EB%A9%94%EC%B9%B4%EC%A7%80.png" alt="아메카지 추천">
+    
+    <img  class="output tech"  style="opacity: 0;" src="%EC%8A%A4%ED%83%80%EC%9D%BC%EC%B6%94%EC%B2%9C-%ED%85%8C%ED%81%AC%EC%9B%A8%EC%96%B4.png" alt="테크웨어 추천">
+    
+     
+    
+    <div id="layer"  class="output" style="width: 400px; height: 600px; background-color: #ABABAB; opacity: 0.3;"></div>
+    
+    <div id="layer2"  class="intro" style="width: 400px; height: 600px; background-color: #ABABAB; opacity: 0.3;"></div>
+    
+    
+    <div class="intro minimal"style="opacity: 0;" >
+        <h1>&gt; Tip!</h1>
+        <ul>
+            <li>미니멀 스타일은 이름 그대로 최소로 꾸미고 단순하게 코디하는, 호불호가 없는 스타일입니다. 또한 '남친룩'의 대명사이기도 합니다. 그러니 색깔 간의 대조 정도가 크지 않게, 투머치한 배색을 피하세요!</li>
+            <br>
+            <li>가장 기본색인 검정색, 하얀색, 회색을 중심으로 코디해보세요. 누구나 매치하기 쉽고, 어설픈 시도를 하는 것보다 안정적입니다.</li>
+            <br>
+            <li>기본적인 색에서부터 다른 사람들의 룩을 참고하여 자신만의 색깔을 찾아가세요! 튀지 않는 채도가 낮은 색끼리 매치도 해보고, 가끔 포인트가 들어간 악세사리 또는 의류를 입으면 단순하지 않고 더 좋습니다. 예를 들면 마르지엘라 페인팅 독일군이 있겠네요.</li>
+        </ul>
+    </div>
+    
+    <div class="intro casual"style="opacity: 0;" >
+        <h1>&gt; Tip!</h1>
+        <ul>
+            <li>젊은 연령층에서 거의 모든 사람들이 찾고 선호하는 스타일인지라 접근성이 아주 높고 종류도 가지각색입니다. 인스타그램이나 패션 카페에서 코디를 많이 찾아보고 자신만의 색깔을 찾아가세요!</li>
+            <br>
+            <li>깔끔한 연출을 위해 상의를 하의 아래로 넣어입기, 일명 '넣입'을 할 때는 넣은 부분과 가슴이 주름지거나 부해보이지 않게 해야 자연스러운 핏이 연출됩니다. 자신에 비해 가슴 단면이 큰 의류의 경우 그런 경우가 종종 발생합니다. 그러니 적당히 맞는 의류로 시도해 보세요!</li>
+            <br>
+            <li>인기가 너무 많아 학교 내, 혹은 길다가 겹치는 옷이 싫다면 </li>
+            <br>
+            <li>국내 브랜드의 경우 의류의 값이 품질에 비해 점점 올라가고 있습니다. 이 점을 감안하여 최대한 합리적인 소비를 하세요. 사전 정보를 많이 찾아보고, 특히 타 소비자들의 리뷰를 꼼꼼히 살피세요. 그러면 낭비하는 일을 줄일 수 있습니다.</li>
+        </ul>
+    </div>
+    
+    <div class="intro street"style="opacity: 0;"  >
+        <h1>&gt; Tip!</h1>
+        <ul>
+            <li>스트릿 스타일은 자신의 차별화된 개성을 확실하게 드러낼 수 있는 점이 장점입니다. 인스타그램 등에서 코디를 많이 찾아보고 자신의 색깔을 찾아가세요.</li><br>
+            <li>스트릿 의류의 디자인과 재질은 가격에 비례합니다. 정말 기본 아이템 아니면 중~고가 의류를, 여유가 있다면 고가의 하이엔드 의류를 구매해 코디해보세요.</li>
+            <br>
+            <li>주변 사람들이 스트릿 스타일을 잘 모른다면 생소하게 여길지도 모릅니다. 하지만 그동안 쌓아온 당신의 스타일 감각을 믿으세요! 자신이 꽤 잘 아는 축에 속한다면 그 부류의 사람들의 시선을 의식할 필요가 없습니다.</li>
+            <br>
+            <li>
+                너무 튄다 싶으면 캐쥬얼 스타일을 섞어서 '캐트릿' 코디를 해보세요. 적당히 포인트를 줄 수 있는 스트릿의 순한맛!
+            </li>
+            <br>
+            <li>
+                국내 스트릿 룩을 보고 싶다면 래퍼 '레디'의 인스타를 참고해보세요. 
+            </li>
+        </ul>
+    </div>
+    
+    <div class="intro america"style="opacity: 0;"  >
+        <h1>&gt; Tip!</h1>
+        <ul>
+            <li>아메카지 스타일의 배경을 먼저 보자면, 옛 미국(아메리카)의 캐주얼 스타일에서 파생되었습니다. 미국 캐주얼은 우리나라와 달리 작업복 등의 실용적인 의류를 일컫습니다. 이 아메리칸 캐주얼이 일본으로 유입되면서 일본식으로 재해석된 아메카지 스타일이 탄생한 것 입니다.<br> 따라서 주머니가 딸린 카고바지나 자켓, 펑퍼짐한 의류 등을 중심으로 코디해보세요.</li>
+            <br>
+            <li>비니를 시도해보세요! 아메카지 스타일만큼 비니가 찰떡인 스타일은 거의 없습니다.
+            </li>
+            <br>
+            <li>이 스타일은 주로 갈색, 상아색, 또는 녹색 계열을 중심의 톤이 쓰입니다.</li>
+        </ul>
+     </div>
+     
+    <div class="intro tech" style="opacity: 0;" >
+        <h1>&gt; Tip!</h1>
+        <ul>
+            <li>테크웨어는 이름 그대로 실용성, 기능성(Tech)이 우선인 스타일입니다. 방수가 가능한 고어텍스 재질의 의류만을 선정해 보세요.</li>
+            <br>
+            <li>기능성 재질이라 가격도 아주 높고 매니아층도 적어서 접근하기 힘들 수도 있습니다. 신중히 생각해 보세요. </li>
+            <br>
+            <li>아이러니하게도, 테크웨어의 맛을 따라하기 위해 기능성이 없는 스트릿 스타일의 의류가 시중에 널렸습니다. 기능성이 우선인 테크웨어 스타일에선 가급적 추천하고 싶지는 않지만 여유가 없다면 그 부류의 의류를 사서 자신만의 스타일로 재해석해 보세요.</li>
+            <br>
+            <li>부가적인 장치로 탄창백 혹은 탄창 조끼나 소형 가방을 착용해 보세요! 또한 신발로는 거의 대부분 워커를 신습니다.</li>
+            <br>
+            <li>그냥노창의 앨범을 들읍시다!</li>
+        </ul>
+    </div>
+    </section>
+    
+    <footer>
+        
+    </footer>
+    
+</body>
+</html>

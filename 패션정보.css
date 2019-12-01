@@ -1,0 +1,180 @@
+#head {
+    width: 240px;
+    position: relative;
+    right: 390px;
+}
+
+#rk{
+    width: 100px;
+    position: absolute;
+    top: 60px;
+    right: 1360px;
+}
+
+#d1
+{
+    width: 1020px;
+    height: 180px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 20px;
+}
+
+nav{
+    background-color: #F5F5F5;
+}
+
+nav > div{
+    font-size: 20px; 
+    background-color: white;
+    
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 5px;
+    
+    line-height: 40px;
+    word-spacing: 5px; 
+}
+
+nav a{
+    text-decoration: none;
+    position: relative;
+    right: -20px;
+    font-size: 0.8em;
+}
+
+a{color:#262626; }
+a:hover{color: #ABABAB; font-weight: bolder;}
+
+section{
+    position: absolute;
+    background-color: #F5F5F5;
+    width: 1895px;
+    height: 650px;
+    background-image: url(%EB%82%B4%EC%8A%A4%ED%83%80%EC%9D%BC%EB%B0%B0%EA%B2%BD2.png);
+}
+
+
+.menu img{
+    width: 250px;
+    height: 140px;
+}
+
+.menu{
+    display: inline-block;
+    position: absolute;
+    width: 250px;
+    height: 140px;
+    border: 5px lightgray solid;
+}
+
+#menu1{
+    left: 400px;
+    top: 20px;
+}
+
+#menu2{
+    left: 690px;
+    top: 20px;
+}
+
+#menu3{
+    left: 980px;
+    top: 20px;
+}
+
+#menu4{
+    left: 1270px;
+    top: 20px;
+}
+
+#menu5{
+    left: 1560px;
+    top: 20px;
+}
+
+.intro {
+    top: 25px;
+    left: 320px;
+    position: absolute;
+    background-color: white;
+    
+    display: inline-block;
+    width: 420px;
+    height: 600px;
+    
+}
+
+.brand{
+    display: inline-block;
+    position: absolute;
+    background-color: white;
+    left: 750px;
+    top: 25px;
+    width: 420px;
+    height: 600px;
+}
+
+.look {
+    top: 25px;
+    left: 1180px;
+    position: absolute;
+    background-color: white;
+    
+    display: inline-block;
+    width: 420px;
+    height: 600px;
+    
+}
+
+section  h1{
+    position: absolute;
+    bottom: 530px;
+    left: 15px;
+    display: block;
+    font-size: 1.7em;
+}
+
+ .brand  img{
+    display: inline-block;
+    position: relative;
+    margin-left: 35px;
+    margin-top: 80px;
+    width: 90px;
+    z-index: 1;
+}
+
+.expl{
+    padding: 0px 10px;
+    position: absolute;
+    top: 70px;
+    left: 10px;
+}
+
+.lookpng {
+    width: 250px;
+    height: 450px;
+    position: absolute;
+    top: 80px;
+    margin: 0px 80px;
+    border: 5px lightgray solid;
+}
+
+.arrow1{
+    position: absolute;
+    margin: 262px 0px;
+    left: 362px;
+    width: 50px;
+    height: 76px;
+}
+
+.arrow2{
+    position: absolute;
+    margin: 262px 0px;
+    left: 8px;
+    width: 50px;
+    height: 76px;
+}.menu:hover{transform:rotate(5deg); } .arrow2:hover{width: 60px; height: auto; bottom: 5px;} .arrow1:hover{width: 60px; height: auto; bottom: 10px; left: 350px;} .brand > img:hover{transform:rotate(7deg); border: 2px solid lightgrey;}

@@ -1,0 +1,150 @@
+header{
+}
+
+header > div
+{
+    width: 1020px;
+    height: 450px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 20px;
+}
+
+nav{
+    background-color: #F5F5F5;
+}
+
+nav > div{
+    font-size: 20px; 
+    border: 2px solid #494949;
+    width: 1020px;
+    background-color: white;
+    
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 5px;
+    
+    line-height: 40px;
+    word-spacing: 5px; 
+}
+
+nav a{
+    text-decoration: none;
+    position: relative;
+    right: -20px;
+    font-size: 0.8em;
+}
+
+section{
+    background-color: #F5F5F5;
+    
+    height: 600px;
+}
+
+#sec{
+    background-color: white;
+    border: 2px #494949 solid;
+    width: 1020px;
+    height: 527px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 20px;
+}
+
+
+nav  a{color:#262626;}
+nav  a:hover{color: #ABABAB; font-weight: bolder;}
+
+img {margin: 10px 10px 10px 10px; align-content: center; } 
+
+.news {
+    width: 1866px;
+    position: absolute;
+    width: 1000px;
+    height: auto;
+    display: block;
+}
+
+
+#under1{
+    position: absolute;
+    top: 260px;
+    width: 487px;
+    height: auto;
+}
+
+#under2{
+    position: absolute;
+    top: 260px;
+    left: 513px;
+    width: 487px;
+    height: auto;
+}
+
+footer{
+    width: 1000px;
+    height: 180px;
+    background-color: white;
+}
+
+footer > div {
+    position: relative;
+    top: 20px;
+    left: 470px;
+    word-spacing: 10px;
+    font-weight: bold;
+    column-count: 2;
+    column-gap: 15px;
+    line-height: 30px;
+}
+
+#txt > a{
+    text-decoration: none;
+    color: #ABABAB;
+}
+
+#dot{
+    width: 12px;
+    position: absolute;
+    top: 227px;
+    left: 86px;
+    z-index: 2;
+}
+
+#dot1{
+    width: 12px;
+    position: absolute;
+    top: 227px;
+    left: 20px;
+    z-index: 1;
+ 
+}
+
+#dot2{
+    width: 12px;
+    position: absolute;
+    top: 227px;
+    left: 42px;
+    z-index: 1;
+}
+
+#dot3{
+    width: 12px;
+    position: absolute;
+    top: 227px;
+    left: 64px;
+    z-index: 1;
+}
+
+#dot4{
+    width: 12px;
+    position: absolute;
+    top: 227px;
+    left: 86px;
+    z-index: 1;
+}

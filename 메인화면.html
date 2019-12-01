@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10409 10411 10412 정통 프로젝트</title>
+     <link rel="stylesheet" type="text/css" href="메인화면.css">
+     <script>
+         var count=1
+        
+        function get(th){
+            var ids=undefined
+            if(th==undefined){
+                ids=count
+            }
+            else{
+                ids=th.id[3]
+            }
+            console.log(ids)
+            var thi=document.getElementById('dot'+ids)
+
+            document.getElementById('dot1').src='%EC%A0%902.png'
+            document.getElementById('dot2').src='%EC%A0%902.png'
+            document.getElementById('dot3').src='%EC%A0%902.png'
+            document.getElementById('dot4').src='%EC%A0%902.png'
+    
+            thi.src="%EC%A0%90.png"
+            var news=document.getElementsByClassName('news')
+            for(a of news){
+                a.style.opacity=0
+            }
+            document.getElementsByClassName('dot'+ids)[0].style.opacity=1
+        if(ids==4){
+            count=1
+        }
+        else{
+            count=ids*1+1
+        }
+        }
+        </script>
+</head>
+
+
+
+<body onload="setInterval(get,3000)">
+ 
+     <header>
+        <div>
+         <img src="%ED%83%80%EC%9D%B4%ED%8B%80.png" alt="코디해주는 코기">
+         </div>
+     </header>
+  
+    <nav>
+       <div>
+        <a href="%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4.html" style="font-weight: bold;">홈</a>
+        <a href="%EC%86%8C%EC%8B%9D.html" style="font-weight: bold">소식</a>
+        <a href="%EB%82%B4%EC%8A%A4%ED%83%80%EC%9D%BC.html" style="font-weight: bold">내스타일</a>
+        <a href="%ED%8C%A8%EC%85%98%EC%A0%95%EB%B3%B4.html" style="font-weight: bold">패션정보</a>
+        <a style="position: absolute; right: 15px; font-weight: bold" href="" onclick="alert('정보 통신을 가르쳐 주신 자랑스러운 예원쌤\n웰시코기\n알고리즘\n김 호')">Credit</a>
+        </div>
+    </nav>
+   
+   <section>
+    <div id="sec">
+    
+
+
+<img id="dot1" src="%EC%A0%90.png" alt="점" onclick="get(this)">
+
+<img id="dot2" src="%EC%A0%902.png" alt="점" onclick="get(this)">
+
+<img id="dot3" src="%EC%A0%902.png" alt="점" onclick="get(this)">
+<img id="dot4" src="%EC%A0%902.png" alt="진한점" onclick="get(this)">
+    
+    
+    
+    
+    <a href="">
+    <img src="%EC%8A%A4%EC%BA%87%EB%82%98%EC%9D%B4%ED%82%A4.png" alt="소식" class="news dot1"></a>
+
+    <a href="">
+    <img src="%EC%95%84%EC%9D%B4%EC%95%B1%EB%B0%9C%EB%A7%A4.png" alt="소식" class="news dot2"></a>
+
+    <a href="">
+    <img src="%ED%94%BC%EB%A7%88%EC%9B%90%EB%82%98%EC%9D%B4%ED%82%A4.png" alt="소식" class="dot3 news"></a>
+    
+    <a href="">
+    <img src="%EB%9F%B0%EC%8A%A4%ED%83%80.png" alt="소식" class="news dot4"></a>
+   
+    <a href="%EB%82%B4%EC%8A%A4%ED%83%80%EC%9D%BC.html">
+    <img src="%ED%95%98%EB%8B%A8%EB%B2%84%ED%8A%BC.png" alt="스타일 찾기" class="under" id="under1"></a>
+    
+    <a href="%ED%8C%A8%EC%85%98%EC%A0%95%EB%B3%B4.html">
+    <img src="%ED%95%98%EB%8B%A8%EB%B2%84%ED%8A%BC2.png" alt="패션 정보" class="under"  id="under2"
+    style="display: inline-block;"></a>
+    </div>
+    
+    </section>
+    
+    <footer>
+    <div id="txt">
+    <a href="http://acha1.com/category/view-all/24/">ACHA</a>
+    <a href="https://lostmanagementcities.com/">LMC</a>
+    <a href="http://i4p.kr/">I4P</a>
+    <a href="https://www.antisocialsocialclub.com/">ANTI-SOCIAL-SOCIAL-CLUB</a>
+    <a href="https://www.stoneisland.com/kr">STONE-ISLAND</a>
+    <a href="https://www.nike.com/kr/ko_kr/?ctnakey=03-1015-5-75132&utm_source=google&utm_medium=CPC&cp=kr_pf_ps_ggkw_pc&gclid=EAIaIQobChMIspvomcHi5QIVjamWCh38FQLjEAAYASAAEgJSsfD_BwE">NIKE</a>
+    <a href="https://shop.adidas.co.kr/adiMain.action?NFN_ST=Y&gclid=EAIaIQobChMIg8eknsHi5QIVGqqWCh119gDPEAAYASAAEgKPGvD_BwE">ADIDAS</a>
+    <a href="http://www.carhartt-wip.co.kr/front/main.do">CARHARTT</a>
+    <a href="https://www.off---white.com/en/KR">OFF-WHITE</a>
+    <a href="https://thisisneverthat.com/">THISISNEVERTHAT</a>
+    <a href="https://www.acnestudios.com/kr/ko/home?gclid=EAIaIQobChMI0ZXbr8Hi5QIVE6uWCh3FDAYwEAAYASAAEgKYY_D_BwE">ACNE-STUDIO</a>
+    <a href="https://acrnm.com/">ACRONYM</a>
+    <a href="https://www.prada.com/ko_kr.html?cc=AP">PRADA</a>
+    <a href="https://www.chanel.com/us/">CHANEL</a>
+    <a href="https://www.gucci.com/kr/ko/?ctnakey=10042394&utm_source=Google_kr&utm_medium=cpc&utm_campaign=kr_cpc_desk_brand&utm_term=GUCCI&utm_content=gucci_brand&gclid=EAIaIQobChMI_cqrxsHi5QIVhKmWCh2EdgazEAAYASAAEgIEXPD_BwE">GUCCI</a>
+    <a href="https://www.maisonmargiela.com/kr">MASION-MARGIELA</a>
+    <a href="https://kr.louisvuitton.com/kor-kr/homepage?campaign=sem_GG-KR-KOR-EC-BRAN-BREX">LOUIS-VUITTON</a>
+    <a href="https://rafsimons.com/">RAF-SIMONS</a>
+    </div>
+    </footer>
+    
+</body>
+</html>
